@@ -1,0 +1,374 @@
+/* Valores reutilizavéis*/
+:root {
+    --verde-primario: #2E7D32;
+    --verde-secundario: #388E3C;
+    --verde-claro: #8BC34A;
+    --branco: #FFFFFF;
+    --cinza-claro: #F5F5F5;
+    --cinza-medio: #E0E0E0;
+    --cinza-escuro: #424242;
+    --preto: #212121;
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografia */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--preto);
+    background-color: var(--branco);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: var(--branco);
+    box-shadow: var(--sombra);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotipo h1 {
+    font-size: 1.8rem;
+    color: var(--verde-primario);
+}
+
+.logotipo span {
+    color: var(--verde-secundario);
+}
+
+.menuprincipal {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menuprincipal a {
+    text-decoration: none;
+    color: var(--cinza-escuro);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menuprincipal a:hover {
+    color: var(--verde-primario);
+}
+
+/* Botão principal */
+.botaoprincipal {
+    display: inline-block;
+    background-color: var(--verde-primario);
+    color: var(--branco);
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.botaoprincipal:hover {
+    background-color: var(--verde-secundario);
+}
+
+
+
+/* Seção Destaque */
+.destaque {
+    padding: 120px 0 60px;
+    background-color: var(--cinza-claro);
+}
+
+.destaque .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.conteudodestaque {
+    flex: 1;
+}
+
+.conteudodestaque h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--verde-primario);
+}
+
+.conteudodestaque p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--cinza-escuro);
+}
+
+.imagemdestaque {
+    flex: 1;
+    text-align: center;
+}
+
+.imagemdestaque img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+}
+
+/* Seção de Dados */
+.secaodados {
+    padding: 60px 0;
+    background-color: var(--branco);
+}
+
+.secaodados h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--verde-primario);
+}
+
+.gradedados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cartaodado {
+    background-color: var(--branco);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+}
+
+.cartaodado:hover {
+    transform: translateY(-5px);
+}
+
+.valordado {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--verde-primario);
+    margin-bottom: 10px;
+}
+
+.descricaodado {
+    font-size: 1.2rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 10px;
+}
+
+.fontedado {
+    font-size: 0.9rem;
+    color: var(--cinza-medio);
+    font-style: italic;
+}
+
+/* Seção Sobre o projeto */
+.secaosobre {
+    padding: 60px 0;
+    background-color: var(--cinza-claro);
+    text-align: center;
+}
+
+.secaosobre h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--verde-primario);
+}
+
+.descricao {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.recursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.recurso {
+    background-color: var(--branco);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+.recursoicone {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.recurso h4 {
+    font-size: 1.5rem;
+    color: var(--verde-primario);
+    margin-bottom: 15px;
+}
+
+.recurso p {
+    font-size: 1rem;
+    color: var(--cinza-escuro);
+    
+}
+
+ /* Chamada final para o painel principal final */
+.painelprincipalfinal {
+    padding: 60px 0;
+    background-color: var(--verde-primario);
+    color: var(--branco);
+    text-align: center;
+}
+
+.painelprincipalfinal h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.painelprincipalfinal .botaoprincipal {
+    background-color: var(--branco);
+    color: var(--verde-primario);
+    font-size: 1.2rem;
+    padding: 15px 30px;
+}
+
+.painelprincipalfinal .botaoprincipal:hover {
+    background-color: var(--cinza-claro);
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--preto);
+    color: var(--branco);
+    padding: 40px 0 20px;
+}
+
+.conteudorodape {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.logorodape h4 {
+    font-size: 1.5rem;
+    color: var(--branco);
+    margin-bottom: 10px;
+}
+
+.logorodape span {
+    color: var(--verde-claro);
+}
+
+.logorodape p {
+    color: var(--cinza-medio);
+}
+
+.linksrodape {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.linksrodape a {
+    color: var(--cinza-medio);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.linksrodape a:hover {
+    color: var(--branco);
+}
+
+.copyrightrodape {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--cinza-escuro);
+    color: var(--cinza-medio);
+    font-size: 0.9rem;
+}
+
+ /* Responsividade */
+@media (max-width: 768px) {
+    .cabecalho .conteiner {  
+        flex-direction: column;  
+        gap: 20px;  
+    }
+   
+    .destaque .conteiner {  
+        flex-direction: column;  
+    }
+    
+    .conteudodestaque {  
+        text-align: center;  
+        margin-bottom: 40px; 
+    }
+    
+    .conteudodestaque h2 { 
+        font-size: 2rem;
+    }
+
+    .gradedados {  
+        grid-template-columns: 1fr;  
+    }
+   
+    .recursos {  
+        grid-template-columns: 1fr;  
+    }
+    
+    .conteudorodape {  
+        flex-direction: column;  
+        gap: 30px;  
+    }
+}
+
+@media (max-width: 480px) {
+   
+    .navegacaoprincipal {  
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    .conteudodestaque h2 {  
+        font-size: 1.8rem;  
+    }
+    
+    .conteudodestaque p {  
+        font-size: 1rem;  
+    }
+    
+    .botaoprincipal {  
+        padding: 10px 20px; 
+    }
+}
